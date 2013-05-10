@@ -3,6 +3,7 @@ require_relative '../models/task'
 class TasksController  < ActiveRecord::Base
   def self.new_task(task)
     Task.create!(:description => task)
+    puts "new #{task}"
   end
 
   def self.print_all
