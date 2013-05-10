@@ -7,7 +7,7 @@ class TasksController  < ActiveRecord::Base
   end
 
   def self.print_all
-    Task.all.each{|task| puts task}
+    Task.all.each{|task| task.printer}
   end
 
   def self.complete(task_id)

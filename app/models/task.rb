@@ -4,8 +4,8 @@ class Task < ActiveRecord::Base
     self.save
   end
 
-  def to_s
-    "#{self.id} [_]: #{self.description}" if self.complete_status == false
-    "#{self.id} [X]: #{self.description}" if self.complete_status == true
+  def printer
+    puts "#{self.id} [_]: #{self.description}" if self.complete_status == false
+    puts "#{self.id} [X]: #{self.description}" if self.complete_status == true
   end
 end
