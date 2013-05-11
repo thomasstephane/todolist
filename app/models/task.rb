@@ -8,7 +8,7 @@ class Task < ActiveRecord::Base
   end
 
   def printer
-    puts "#{self.id} [_]: #{self.description}" if self.complete_status == false
     puts "#{self.id} [X]: #{self.description}" if self.complete_status == true
+    puts "#{self.id} [_]: #{self.description}" if self.complete_status == false || self.complete_status == nil
   end
 end
