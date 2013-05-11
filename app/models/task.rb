@@ -1,4 +1,7 @@
 class Task < ActiveRecord::Base
+
+  belongs_to :list
+
   def complete
     self.complete_status = true
     self.save
